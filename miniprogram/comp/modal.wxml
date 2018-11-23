@@ -1,0 +1,16 @@
+<view class='user-toast'>
+  <view class='user-toast__header'>用户须知</view>
+  <view class='user-toast__body'>
+    <text class='user-toast__text'>一、为督促您阅读，方便其他同事借阅，借阅时间不能超过一个月，请尽快完成阅读。</text>
+    <text class='user-toast__text'>二、请在归还的时候，在此小程序完成归还确认。</text>
+    <text class='user-toast__text'>三、爱惜借阅图书，不得丢失，沾水，损毁，违者请补充同款新书。</text>
+    <text class='user-toast__text'>
+      <text style='color:#179B16'>声明：</text>
+      <text>本图书由新氧 ToB 前端团队提供，若您点击同意，说明已经与本团队就以上借阅规定达成共识，请务必遵守，否则我们有权停止提供借阅服务！</text>
+    </text>
+  </view>
+  <view class='user-toast__action'>
+    <button type='default' size='mini'>不同意</button>
+    <button type='primary' size='mini'>同意</button>
+  </view>
+</view>

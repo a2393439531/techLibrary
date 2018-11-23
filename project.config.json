@@ -1,0 +1,55 @@
+{
+	"miniprogramRoot": "miniprogram/",
+	"cloudfunctionRoot": "cloudfunctions/",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"nodeModules": true
+	},
+	"appid": "wx23d8f71d58340213",
+	"projectname": "techLibrary",
+	"libVersion": "2.4.0",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": 2,
+			"list": [
+				{
+					"id": 0,
+					"name": "book",
+					"pathName": "pages/book/index",
+					"query": "mode=back"
+				},
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/my/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "store",
+					"pathName": "pages/store/index",
+					"query": ""
+				}
+			]
+		}
+	}
+}

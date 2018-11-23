@@ -1,0 +1,24 @@
+<view class='container'>
+  <view class='wrapper'>
+    <view class='main'>
+      <image class='main__item-img--top' mode='widthFix' src=''></image>
+      <block wx:for='{{userList}}' wx:key='{{index}}'>
+        <view wx:if='{{index%2===0}}' class='main__item main__item--left'>
+          <image class='main__good-img' src='{{item.reading_book.book_image}}' mode='aspectFill'></image>
+          <view class='main__user-info'>
+            <image class='main__user-img' src='{{item.avatarUrl}}'></image>
+            <text class='main__user-name'>{{item.nickName}} 在读</text>
+          </view>
+        </view>
+        <view wx:else class='main__item main__item--right'>
+          <image class='main__good-img' src='{{item.reading_book.book_image}}' mode='widthFix'></image>
+          <view class='main__user-info'>
+            <image class='main__user-img' src='{{item.avatarUrl}}'></image>
+            <text class='main__user-name'>{{item.nickName}} 在读</text>
+          </view>
+        </view>
+      </block>
+      <image class='main__item-img--bottom' mode='aspectFit' src=''></image>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/main/index",
+    "pages/my/index",
+    "pages/store/index",
+    "pages/book/index"
+  ],
+  "tabBar": {
+    "color": "#333",
+    "backgroundColor": "#fff",
+    "borderStyle": "white",
+    "selectedColor": "#2cc7c5",
+    "list": [
+      {
+        "pagePath": "pages/main/index",
+        "text": "大牛在读",
+        "iconPath": "/images/main-icon.png",
+        "selectedIconPath": "/images/main-icon-sel.png"
+      },
+      {
+        "pagePath": "pages/store/index",
+        "text": "书城",
+        "iconPath": "/images/store-icon.png",
+        "selectedIconPath": "/images/store-icon-sel.png"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "text": "ME",
+        "iconPath": "/images/my-icon.png",
+        "selectedIconPath": "/images/my-icon-sel.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "新氧技术图书角",
+    "navigationBarTextStyle": "black"
+  }
+}

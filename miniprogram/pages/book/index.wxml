@@ -1,0 +1,31 @@
+<view class="container">
+  <view class='book'>
+    <image mode='widthFix' class='book__img' src='{{bookInfo.image}}'></image>
+    <view class='book__info'>
+      <view class='book__title'>{{bookInfo.title}}</view>
+      <view class='book__subtitle'>{{bookInfo.subtitle}}</view>
+      <view wx:if="{{bookInfo.author.length > 0}}">{{bookInfo.author[0]}} 著</view>
+      <view wx:if="{{bookInfo.translator.length > 0}}">{{bookInfo.translator[0]}} 译</view>
+      <view>{{bookInfo.publisher}} / {{bookInfo.pubdate}}</view>
+      <view>{{bookInfo.pages}} 页</view>
+    </view>
+  </view>
+  <view wx:if="{{bookInfo.summary}}" class='book-summary book-intro'>
+    <view class='summary-title'>简介：</view>
+    <view><text>{{bookInfo.summary}}</text></view>
+  </view>
+  <view wx:if="{{bookInfo.author_intro}}" class='book-summary author-intro'>
+    <view class='summary-title'>作者简介：</view>
+    <view><text>{{bookInfo.author_intro}}</text></view>
+  </view>
+  <view wx:if="{{bookInfo.catalog}}" class='book-summary catalog'>
+    <view class='summary-title'>目录：</view>
+    <view><text>{{bookInfo.catalog}}</text></view>
+  </view>
+</view>
+<view class='func'>
+  <view bindtap='uploadBookInfoToStore' wx:if="{{mode==='share'}}" class='func-btn'>共享图书</view>
+  <view bindtap='goBackBook' wx:if="{{mode==='back'}}" class='func-btn'>拥有者确认</view>
+  <view bindtap='borrowBook' wx:if="{{mode==='borrow' && bookInfo.status}}" class='func-btn'>借阅</view>
+  <view wx:else class='func-btn func-btn__disable'>已借出</view>
+</view>

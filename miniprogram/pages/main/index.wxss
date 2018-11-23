@@ -1,0 +1,79 @@
+/**app.wxss**/
+page{
+  height: 100%;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  height: 100%;
+  background: rgb(248, 248, 248);
+} 
+/** 页面内容的外层 用于布局 **/
+.wrapper{
+  flex: 1;
+}
+.main{
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+.main__item-img--top{
+  width: 350rpx;
+  height: 400rpx;
+  border-radius: 10rpx;
+  margin-right: 20rpx;
+  margin-top:20rpx;
+  float:right;
+  background: #fff;
+}
+.main__item-img--bottom{
+  width: 350rpx;
+  height: 180rpx;
+  border-radius: 10rpx;
+  margin-right: 20rpx;
+  margin-top:20rpx;
+  float:right;
+  background: #fff;
+}
+.main__item{
+  width: 350rpx;
+  box-sizing: border-box;
+  border-radius: 10rpx;
+  background: #fff;
+  margin-top: 20rpx;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 10rpx;
+}
+.main__item--left{
+  float: left;
+  margin-left: 20rpx;
+}
+.main__item--right{
+  float:right;
+  margin-right:20rpx;
+}
+.main__good-img{
+  width: 100%;
+}
+.main__user-info{
+  padding:20rpx;
+  color: #333;
+  font-size: 12px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.main__user-img{
+  height: 48rpx;
+  width: 48rpx;
+  border-radius: 4px;
+}
+.main__user-name{
+  margin-left: 20rpx;
+}

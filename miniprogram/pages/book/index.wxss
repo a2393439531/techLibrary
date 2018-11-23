@@ -1,0 +1,71 @@
+page{
+  height: 100%;
+  background: #f5f5f5;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+}
+.book{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  box-sizing: border-box;
+  padding: 30rpx;
+  background: #fff;
+}
+.book__img{
+  width: 300rpx;
+  margin-right: 30rpx;
+}
+.book__info{
+  font-size: 13px;
+  color: #555;
+  line-height: 1.8;
+}
+.book__title{
+  font-size:16px;
+  color:#000;
+}
+.book__subtitle{
+  font-size:14px;
+  color:#333;
+}
+.book-summary{
+  background: #fff;
+  color: #555;
+  font-size: 14px;
+  margin-top: 20rpx;
+  margin-bottom:20rpx;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 30rpx;
+  line-height: 1.8;
+}
+.catalog{
+  margin-bottom: 100rpx;
+}
+.func{
+  height: 100rpx;
+  width: 100%;
+  position: fixed;
+  bottom: 0rpx;
+  left: 0rpx;
+  background: #fff;
+}
+.func-btn{
+  background: green;
+  height: 100rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 16px;
+}
+.func-btn__disable{
+  background:#d8d7d7;
+}
+.summary-title{
+  font-size: 16px;
+  font-weight: bold;
+  width: 100%;
+}

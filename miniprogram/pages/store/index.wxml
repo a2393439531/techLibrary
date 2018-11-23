@@ -1,0 +1,16 @@
+<view class="container">
+  <view  data-id="{{item.isbn13}}" bindtap='navToBookPage' wx:for="{{bookList}}" wx:key="{{item._id}}" class='book'>
+    <view class='img__wrapper'>
+     <image class='book__img' src='{{item.image}}' mode='aspectFit'></image>
+    </view>
+    <view class='book__info'>
+      <view class='book__title'>{{item.title}}</view>
+      <view class='book__subtitle'>{{item.subtitle}}</view>
+      <view wx:if="{{item.author.length}}">{{item.author[0]}} 著</view>
+      <view wx:if="{{item.translator.length}}">{{item.translator[0]}} 译</view>
+      <view>{{item.publisher}} / {{item.pubdate}}</view>
+      <view>{{item.pages}} 页</view>
+      <view style='margin-top:20rpx;color:{{item.status?"green":"red"}}'>{{item.status ? '可借阅':'已借出'}}</view>
+    </view>
+  </view>
+</view>

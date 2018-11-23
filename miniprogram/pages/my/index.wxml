@@ -1,0 +1,42 @@
+<view wx:if="{{!isLogin}}" class='login-wrapper'>
+  <image class='login-image' src='/images/login.png' mode='aspectFit'></image>
+  <button open-type='getUserInfo' bindgetuserinfo="bindGetUserInfo" class='login'>登陆</button>
+</view>
+<view wx:if="{{isLogin}}" class="container">
+  <view class='user-info'>
+    <image src='{{userInfo.avatarUrl}}' mode='aspectFit' class='user-image'></image>
+  </view>
+  <view class='user-book-info'>
+    <view class='has-read'>
+      <view class='has-read-num'>{{read_num}}</view>
+      <view class="has-read-text">已读</view>
+    </view>
+    <view class='has-read'>
+      <view class='has-read-num'>{{share_num}}</view>
+      <view class="has-read-text">捐献</view>
+    </view>
+    <view class='has-read'>
+      <view class='has-read-num'>--</view>
+      <view class="has-read-text">想法</view>
+    </view>
+  </view>
+  <view class='func-wrapper'>
+    <view class='func' bindtap='borrowBook'>
+      <image src='/images/plus.png' mode='aspectFit' class='func-icon'></image>
+      <view class='func-text'>借书</view>
+    </view>
+    <view class='func' bindtap='backBook'>
+      <image src='/images/minus.png' mode='aspectFit' class='func-icon'></image>
+      <view class='func-text'>还书</view>
+    </view>
+    <view class='func' bindtap='upLoadBookInfo'>
+      <image src='/images/push-star.png' mode='aspectFit' class='func-icon'></image>
+      <view class='func-text'>分享藏书</view>
+    </view>
+    <!-- <view class='func'>
+      <image src='/images/buy.png' mode='aspectFit' class='func-icon'></image>
+      <view class='func-text'>找书</view>
+    </view> -->
+  </view>
+</view>
+<camera wx:if="{{cameraShown}}" bindscancode="handleBookInfo" device-position="back" mode="scanCode" flash="auto" class='camera'></camera>
