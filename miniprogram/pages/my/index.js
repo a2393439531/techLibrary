@@ -30,6 +30,16 @@ Page({
       })
     })
   },
+  onShow:function(){
+    wx.cloud.callFunction({
+      name: 'myData'
+    }).then((res) => {
+      that.setData({
+        read_num: res.result && res.result.read_num,
+        share_num: res.result && res.result.share_num,
+      })
+    })
+  },
   setUserInfo(res){
     var that = this;
     const db = wx.cloud.database();

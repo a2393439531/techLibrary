@@ -6,6 +6,12 @@ Page({
     bookInfo:{}
   },
 
+  onShareAppMessage: function (res) {
+    const that = this;
+    return {
+      title: '喜欢的同学快来借阅吧！'
+    }
+  },
   onLoad: function (options) {
     const that = this;
     var isbn = options.isbn || '9787115326560';

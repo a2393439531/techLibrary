@@ -14,24 +14,28 @@ exports.main = async (event, context) => {
     isbn13: isbn
   }).get();
   const user_info = await userCollection.where({
-    reading:{
+    reading_book:{
       isbn13: isbn,     
     }
   }).get();
   
   if(book_info.data[0]._openid === OPENID){
-    await bookCollection.doc(book_info.data[0]._id).update({
-      data: {
-        back_time: new Date().toLocaleDateString(),
-        status: 1,
-      }
-    });
+    try{
+      await bookCollection.doc(book_info.data[0]._id).update({
+        data: {
+          back_time: new Date().toLocaleDateString(),
+          status: 1,
+        }
+      });
 
-    await userCollection.doc(user_info.data[0]._id).update({
-      data: {
-        reading_status: 0,
-      }
-    })
+      await userCollection.doc(user_info.data[0]._id).update({
+        data: {
+          reading_status: 0,
+        }
+      })
+    }catch(e){
+      console.log(e);
+    }
     return 1;
   }else{
     return '请让书籍拥有者扫码确认还书！'

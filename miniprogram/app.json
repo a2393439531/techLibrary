@@ -36,6 +36,7 @@
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6F6F6",
     "navigationBarTitleText": "新氧技术图书角",
+    "enablePullDownRefresh": true,
     "navigationBarTextStyle": "black"
   }
 }
