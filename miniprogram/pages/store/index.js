@@ -31,11 +31,10 @@ Page({
 
   onShow(){
     const that = this;
+    let bookList = that.data.bookList;
     this.setData({
-      bookList: [],
+      bookList: bookList.slice(0, 20),
       skipNum:0,
-    }, function () {
-      that.getStoreData();
     });
   },
   onLoad: function (options) {

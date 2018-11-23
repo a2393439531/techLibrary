@@ -13,13 +13,12 @@ Page({
       that.getMainData();
     });
   },
-  onShow: function(){
+  onShow() {
     const that = this;
+    let userList = that.data.userList;
     this.setData({
-      userList: [],
+      userList: userList.slice(0, 20),
       skipNum: 0,
-    }, function () {
-      that.getMainData();
     });
   },
   onReachBottom: function () {
