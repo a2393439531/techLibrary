@@ -8,6 +8,7 @@
       <view wx:if="{{bookInfo.translator.length > 0}}">{{bookInfo.translator[0]}} 译</view>
       <view>{{bookInfo.publisher}} / {{bookInfo.pubdate}}</view>
       <view>{{bookInfo.pages}} 页</view>
+      <view class='book-sharer' wx:if="{{bookInfo.sharer}}">{{bookInfo.sharer}}老师分享</view>
     </view>
   </view>
   <view wx:if="{{bookInfo.summary}}" class='book-summary book-intro'>

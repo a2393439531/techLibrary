@@ -9,6 +9,32 @@ page{
   display: flex;
   flex-direction: row;
   box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+.book-status{
+  text-align: center;
+  color: #fff;
+  line-height: 1.2;
+  width: 80px;
+  transform:rotate(47deg);
+  position: absolute;
+  top: 15px;
+  right: -20px;
+}
+.book-status--out{
+  background: red;
+}
+.book-status--in{
+  background: green;
+}
+.book-sharer{
+  color: #fff;
+  font-size: 14px;
+  padding: 0rpx 20rpx;
+  background: green;
+  border-radius: 4px;
+  text-align: center;
 }
 .img__wrapper{
   width: 300rpx;

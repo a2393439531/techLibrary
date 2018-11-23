@@ -1,7 +1,7 @@
 <view class='container'>
   <view class='wrapper'>
     <view class='main'>
-      <image class='main__item-img--top' mode='widthFix' src=''></image>
+      <image class='main__item-img--top' mode='widthFix' src='https://felibrary-e7f3f4.tcb.qcloud.la/20171002205158_77098_320.png?sign=9ef3df51cabd783d82e5642448371102&t=1542942694'></image>
       <block wx:for='{{userList}}' wx:key='{{index}}'>
         <view wx:if='{{index%2===0}}' class='main__item main__item--left'>
           <image class='main__good-img' src='{{item.reading_book.book_image}}' mode='aspectFill'></image>
@@ -18,7 +18,6 @@
           </view>
         </view>
       </block>
-      <image class='main__item-img--bottom' mode='aspectFit' src=''></image>
     </view>
   </view>
 </view>

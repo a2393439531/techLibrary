@@ -14,6 +14,15 @@ page{
   padding: 30rpx;
   background: #fff;
 }
+.book-sharer{
+  color: #fff;
+  font-size: 14px;
+  margin-top: 30rpx;
+  padding: 10rpx 20rpx;
+  background: green;
+  border-radius: 4px;
+  text-align: center;
+}
 .book__img{
   width: 300rpx;
   margin-right: 30rpx;
